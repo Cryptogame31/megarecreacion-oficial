@@ -25,20 +25,21 @@ interface PackageOption {
 }
 
 const PACKAGES_OPTIONS: PackageOption[] = [
-  { id: 'pkg-mega', name: 'Paquete MEGA (2.5h - Pintacaritas, Payaso y Magia)', shortName: 'Paquete MEGA', price: 180000, duration: 2.5, staff: 1, needsInf: false, category: 'principal' },
-  { id: 'pkg-megamax', name: 'Paquete MEGA MAX (2.5 a 3h - Transporte Incluido + Hora Loca)', shortName: 'Paquete MEGA MAX', price: 190000, duration: 3, staff: 1, needsInf: false, category: 'principal', tag: '¡Más Pedido! 🔥' },
-  { id: 'pkg-megafiesta', name: 'Paquete MEGA FIESTA (3.5h - 2 Recreacionistas, Títeres y Magia)', shortName: 'Paquete MEGA FIESTA', price: 260000, duration: 3.5, staff: 2, needsInf: false, category: 'principal' },
-  { id: 'pkg-megaalegria', name: 'Paquete MEGA ALEGRÍA (4h - Recreación + Castillo Inflable)', shortName: 'Paquete MEGA ALEGRÍA', price: 650000, duration: 4, staff: 1, needsInf: true, category: 'principal', tag: 'Combo Inflable 🏰' },
-  { id: 'pkg-megapack', name: 'MEGA PACK VIP Todo Incluido (Decoración + Inflable + 20 Refrigerios)', shortName: 'MEGA PACK Todo Incluido', price: 1550000, duration: 4, staff: 2, needsInf: true, category: 'principal', tag: 'Cero Estrés 👑' },
-  { id: 'pkg-babyshower', name: 'Paquete BABY SHOWER & ADULTOS (3h - Juegos Modernos + Transporte)', shortName: 'Baby Shower / Adultos', price: 300000, duration: 3, staff: 1, needsInf: false, category: 'principal' },
-  { id: 'pkg-empresarial', name: 'Pausa Activa & Evento Empresarial (1h Recreacionista)', shortName: 'Evento Empresarial', price: 180000, duration: 1, staff: 1, needsInf: false, category: 'principal' },
+  { id: 'pkg-mega', name: 'Paquete MEGA (2.5h - Pintacaritas, Payaso y Magia)', shortName: 'Paquete MEGA ($180k)', price: 180000, duration: 2.5, staff: 1, needsInf: false, category: 'principal' },
+  { id: 'pkg-megamax', name: 'Paquete MEGA MAX (2.5 a 3h - Transporte Incluido + Hora Loca)', shortName: 'Paquete MEGA MAX ($190k)', price: 190000, duration: 3, staff: 1, needsInf: false, category: 'principal', tag: '¡Más Pedido! 🔥' },
+  { id: 'pkg-megafiesta', name: 'Paquete MEGA FIESTA (3.5h - 2 Recreacionistas, Títeres, Magia + Transporte)', shortName: 'Paquete MEGA FIESTA ($300k)', price: 300000, duration: 3.5, staff: 2, needsInf: false, category: 'principal', tag: 'Doble Recreador 🎭' },
+  { id: 'pkg-megaalegria', name: 'Paquete MEGA ALEGRÍA (4h - Recreación + Castillo Inflable + Transporte)', shortName: 'Paquete MEGA ALEGRÍA ($800k)', price: 800000, duration: 4, staff: 1, needsInf: true, category: 'principal', tag: 'Combo Inflable 🏰' },
+  { id: 'pkg-megapack', name: 'MEGA PACK VIP Todo Incluido (Decoración + Inflable + 20 Refrigerios)', shortName: 'MEGA PACK Todo Incluido ($1.55M)', price: 1550000, duration: 4, staff: 2, needsInf: true, category: 'principal', tag: 'Cero Estrés 👑' },
+  { id: 'pkg-babyshower', name: 'Paquete BABY SHOWER & ADULTOS (3h - Juegos Modernos + Transporte)', shortName: 'Baby Shower / Adultos ($300k)', price: 300000, duration: 3, staff: 1, needsInf: false, category: 'principal' },
+  { id: 'pkg-pausa-1h', name: 'Pausa Activa 1 Hora (1 Recreacionista + Bafle Pequeño)', shortName: 'Pausa Activa 1h ($250k)', price: 250000, duration: 1, staff: 1, needsInf: false, category: 'principal', tag: 'Empresas 🏢' },
+  { id: 'pkg-pausa-2h', name: 'Pausa Activa 2 Horas (2 Recreacionistas + Bafle Pequeño)', shortName: 'Pausa Activa 2h ($450k)', price: 450000, duration: 2, staff: 2, needsInf: false, category: 'principal', tag: 'Empresas Full ⭐' },
   // Servicios Adicionales o Combinables
-  { id: 'add-personaje-1h', name: 'Show Personaje Disney / Favorito Completo (1 Hora)', shortName: 'Personaje Disney (1h)', price: 180000, duration: 1, staff: 1, needsInf: false, category: 'adicional', tag: 'Show Musical ⭐' },
-  { id: 'add-personaje-30m', name: 'Personaje Disney Promo (1/2 Hora adicional a tu paquete)', shortName: 'Personaje Disney (1/2h)', price: 80000, duration: 0.5, staff: 1, needsInf: false, category: 'adicional', tag: 'Promo +$80k ✨' },
-  { id: 'add-inflable', name: 'Alquiler Castillo Inflable (4 Horas con Operario + Transporte)', shortName: 'Castillo Inflable (4h)', price: 520000, duration: 4, staff: 1, needsInf: true, category: 'adicional' },
-  { id: 'add-decoracion', name: 'Decoración Temática Personalizada con Globos y Backing', shortName: 'Decoración Temática', price: 480000, duration: 0, staff: 1, needsInf: false, category: 'adicional' },
-  { id: 'add-horaloca', name: 'Adicional Hora Loca o Globoflexia Especial', shortName: 'Hora Loca / Globoflexia', price: 30000, duration: 0.5, staff: 0, needsInf: false, category: 'adicional' },
-  { id: 'add-sonido', name: 'Alquiler Bafle Profesional 6" USB con Música', shortName: 'Bafle de Sonido', price: 45000, duration: 0, staff: 0, needsInf: false, category: 'adicional' },
+  { id: 'add-personaje-1h', name: 'Show Personaje Disney / Favorito Completo (1 Hora)', shortName: 'Personaje Favorito 1h ($180k)', price: 180000, duration: 1, staff: 1, needsInf: false, category: 'adicional', tag: 'Show Musical ⭐' },
+  { id: 'add-inflable', name: 'Alquiler Castillo Inflable (4 Horas con Operario + Transporte)', shortName: 'Castillo Inflable 4h ($520k)', price: 520000, duration: 4, staff: 1, needsInf: true, category: 'adicional' },
+  { id: 'add-decoracion', name: 'Decoración Temática: Arco en globos + 1 Backing + 2 Cilindros + Número Luminoso + Nombre de Regalo', shortName: 'Decoración Temática ($480k)', price: 480000, duration: 0, staff: 1, needsInf: false, category: 'adicional', tag: '¡Nombre de Regalo! 🎈' },
+  { id: 'add-horaloca', name: 'Adicional Hora Loca o Globoflexia Especial', shortName: 'Hora Loca / Globoflexia ($30k)', price: 30000, duration: 0.5, staff: 0, needsInf: false, category: 'adicional' },
+  { id: 'add-cabina-8', name: 'Alquiler Cabina de Sonido 8" con Micrófono y Bluetooth', shortName: 'Cabina Sonido 8" ($100k)', price: 100000, duration: 0, staff: 0, needsInf: false, category: 'adicional', tag: 'Cabina 8" 🔊' },
+  { id: 'add-cabina-14', name: 'Alquiler Cabina de Sonido Profesional 14" Gran Potencia', shortName: 'Cabina Sonido 14" ($250k)', price: 250000, duration: 0, staff: 0, needsInf: false, category: 'adicional', tag: 'Cabina 14" 🔊' },
 ];
 
 export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {

@@ -176,11 +176,11 @@ export const VideoHero: React.FC<VideoHeroProps> = ({ onOpenBooking }) => {
           {[
             '🎪 Paquete Mega $180.000',
             '🔥 Mega Max (Transporte + Hora Loca) $190.000',
-            '🎭 Mega Fiesta (2 Recreacionistas) $260.000',
-            '🏰 Mega Alegría (Con Inflable) $650.000',
+            '🎭 Mega Fiesta (2 Recreacionistas + Transp.) $300.000',
+            '🏰 Mega Alegría (Con Inflable 4h) $800.000',
             '👑 Mega Pack Todo Incluido $1.550.000',
             '🍼 Baby Shower & Adultos $300.000',
-            '🏢 Pausas Activas & Empresas'
+            '🏢 Pausas Activas & Empresas (Desde $250.000)'
           ].map((pill, idx) => (
             <a
               key={idx}

@@ -1,0 +1,46 @@
+# ==============================================================================
+# Mega Recreación Medellín — Robots.txt Oficial
+# Estándar Global Expándete ET-SEO-001 (SEO + GEO + AEO + AI Search Optimization)
+# Dominio Oficial: https://www.megarecreacion.net
+# ==============================================================================
+
+# Rastreadores de Motores de Búsqueda Tradicionales
+User-agent: Googlebot
+Allow: /
+Allow: /catalogo/
+Allow: /images/
+Allow: /videos/
+
+User-agent: Bingbot
+Allow: /
+Allow: /catalogo/
+Allow: /images/
+
+User-agent: Applebot
+Allow: /
+
+# Rastreadores de Motores de Inteligencia Artificial y Búsqueda Generativa (GEO / AEO)
+# OAI-SearchBot: Búsqueda en tiempo real de ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# PerplexityBot: Motor de búsqueda y respuestas conversacionales de Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# ClaudeBot: Asistente de búsqueda y síntesis de Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Google-Extended: Búsquedas generativas de Google Gemini y AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Reglas generales para todos los demás rastreadores
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+# Mapa del Sitio XML Canónico
+Sitemap: https://www.megarecreacion.net/sitemap.xml

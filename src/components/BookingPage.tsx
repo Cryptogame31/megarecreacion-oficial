@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Calendar as CalendarIcon, 
@@ -471,9 +471,9 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onGoHome, initialServi
   }, []);
 
   const selectedCharacter = BOOKING_CHARACTERS.find((c) => c.id === selectedCharacterId) || BOOKING_CHARACTERS[0];
-  const selectedSlotObj = TIME_SLOTS.find((s) => s.id === selectedSlot) || TIME_SLOTS[3];
-
-  const effectivePrice = serviceType === 'pausa-activa' && pausaPlan === '2-recreadores' ? '$300.000 COP' : '$180.000 COP';
+  const effectivePrice = serviceType === 'pausa-activa'
+    ? (pausaPlan === '2-recreadores' ? '$450.000 COP' : '$250.000 COP')
+    : '$180.000 COP';
 
   const handleSelectCharacter = (id: string) => {
     setSelectedCharacterId(id);
@@ -553,7 +553,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onGoHome, initialServi
     if (serviceType === 'pausa-activa') {
       return `¡Hola Mega Recreación! 🏢 Deseo reservar una *Pausa Activa & Bienestar Empresarial*:
 🏢 *Empresa / Organización:* ${companyName || 'Por definir'}
-👥 *Modalidad:* ${pausaPlan === '2-recreadores' ? '2 Recreadores / Personajes ($300.000 COP)' : '1 Recreador / Perro Policía ($180.000 COP)'}
+👥 *Modalidad:* ${pausaPlan === '2-recreadores' ? '2 Horas - 2 Recreadores + Bafle Pequeño ($450.000 COP)' : '1 Hora - 1 Recreador + Bafle Pequeño ($250.000 COP)'}
 🎭 *Personaje / Temática:* ${effectiveCharacterName}
 🎯 *Enfoque:* ${pausaObjective}
 📅 *Fecha:* ${selectedDate}
@@ -798,18 +798,18 @@ ${specialNotes ? `📝 *Notas:* ${specialNotes}` : ''}
                       <div>
                         <div className="flex items-center justify-between">
                           <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">
-                            1 Recreador / Personaje
+                            1 Recreador + Bafle Pequeño
                           </span>
                           {pausaPlan === '1-recreador' && <CheckCircle2 className="w-4 h-4 text-cyan-300" />}
                         </div>
-                        <h4 className="font-bold text-white text-sm mt-1.5">Perro Policía o Personaje Temático</h4>
+                        <h4 className="font-bold text-white text-sm mt-1.5">Pausa Activa 1 Hora</h4>
                         <p className="text-[11px] text-slate-300 mt-1 leading-snug">
-                          Ideal para oficinas, salas de juntas y equipos medianos. Risoterapia, pausas activas y dinamización.
+                          Ideal para oficinas, salas de juntas y equipos medianos. Incluye 1 recreador profesional y bafle pequeño de sonido.
                         </p>
                       </div>
                       <div className="mt-3 pt-2 border-t border-white/10 flex items-center justify-between">
                         <span className="text-xs text-slate-400">1 Hora Completa</span>
-                        <span className="font-black text-cyan-300 text-base">$180.000 COP</span>
+                        <span className="font-black text-cyan-300 text-base">$250.000 COP</span>
                       </div>
                     </button>
 
@@ -828,18 +828,18 @@ ${specialNotes ? `📝 *Notas:* ${specialNotes}` : ''}
                       <div>
                         <div className="flex items-center justify-between">
                           <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">
-                            2 Recreadores / Personajes ⭐ Full
+                            2 Recreadores + Bafle Pequeño ⭐ Full
                           </span>
                           {pausaPlan === '2-recreadores' && <CheckCircle2 className="w-4 h-4 text-emerald-300" />}
                         </div>
-                        <h4 className="font-bold text-white text-sm mt-1.5">Doble Recreador / Pareja Temática</h4>
+                        <h4 className="font-bold text-white text-sm mt-1.5">Pausa Activa 2 Horas</h4>
                         <p className="text-[11px] text-slate-300 mt-1 leading-snug">
-                          Recomendado para IPS, plantas de producción, emisoras y grupos grandes. Mayor cobertura y energía.
+                          Recomendado para IPS, plantas de producción, colegios y empresas. 2 horas con 2 recreadores y bafle pequeño incluido.
                         </p>
                       </div>
                       <div className="mt-3 pt-2 border-t border-white/10 flex items-center justify-between">
-                        <span className="text-xs text-slate-400">1 Hora Completa</span>
-                        <span className="font-black text-emerald-300 text-base">$300.000 COP</span>
+                        <span className="text-xs text-slate-400">2 Horas Completas</span>
+                        <span className="font-black text-emerald-300 text-base">$450.000 COP</span>
                       </div>
                     </button>
                   </div>
