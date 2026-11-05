@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, MessageCircle, CheckCircle2, Eye, X, Calendar, GraduationCap, MapPin, Clock, Users, Flame } from 'lucide-react';
 import { SERVICES, DISPLAY_PHONE, DISPLAY_PHONE_2 } from '../data/mockData';
@@ -273,7 +273,7 @@ export const BentoServices: React.FC<BentoServicesProps> = ({ onOpenBooking }) =
                 <Users className="w-6 h-6 text-emerald-400 shrink-0" />
                 <div>
                   <div className="text-[11px] uppercase text-slate-400 font-bold">Canal Oficial</div>
-                  <div className="text-sm font-black text-white">Grupo Telegram Activo</div>
+                  <div className="text-sm font-black text-white">Comunidad VIP Activa</div>
                 </div>
               </div>
             </div>

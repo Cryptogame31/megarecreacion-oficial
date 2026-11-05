@@ -416,12 +416,12 @@ export type BookingServiceType = 'personaje-show' | 'desayuno-sorpresa' | 'pausa
 
 // Enlaces de Wompi independientes para cada servicio (por ahora en desarrollo el mismo link)
 export const WOMPI_LINKS: Record<BookingServiceType, string> = {
-  'personaje-show': 'https://checkout.wompi.co/l/jxYAG1',
-  'desayuno-sorpresa': 'https://checkout.wompi.co/l/jxYAG1', // Enlace independiente Wompi para Desayunos Sorpresa
-  'pausa-activa': 'https://checkout.wompi.co/l/jxYAG1', // Enlace independiente Wompi para Pausas Activas & Bienestar
+  'personaje-show': 'https://checkout.wompi.co/l/VPOS_acmaNg',
+  'desayuno-sorpresa': 'https://checkout.wompi.co/l/VPOS_acmaNg', // Enlace independiente Wompi para Desayunos Sorpresa
+  'pausa-activa': 'https://checkout.wompi.co/l/VPOS_acmaNg', // Enlace independiente Wompi para Pausas Activas & Bienestar
 };
 
-const WOMPI_PAYMENT_URL = 'https://checkout.wompi.co/l/jxYAG1';
+const WOMPI_PAYMENT_URL = 'https://checkout.wompi.co/l/VPOS_acmaNg';
 
 interface BookingPageProps {
   onGoHome: () => void;
