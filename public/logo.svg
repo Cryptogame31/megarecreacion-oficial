@@ -1,0 +1,129 @@
+<svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#1e6fff" />
+      <stop offset="55%" stop-color="#0840b8" />
+      <stop offset="100%" stop-color="#02144a" />
+    </radialGradient>
+    <radialGradient id="sunGlow" cx="45%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#fff766" />
+      <stop offset="70%" stop-color="#ffb700" />
+      <stop offset="100%" stop-color="#e68a00" />
+    </radialGradient>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3366" />
+      <stop offset="18%" stop-color="#ff9900" />
+      <stop offset="36%" stop-color="#ffff00" />
+      <stop offset="54%" stop-color="#33cc33" />
+      <stop offset="72%" stop-color="#00ccff" />
+      <stop offset="90%" stop-color="#9933ff" />
+      <stop offset="100%" stop-color="#ff00cc" />
+    </linearGradient>
+    <radialGradient id="noseGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ff9999" />
+      <stop offset="35%" stop-color="#ff1122" />
+      <stop offset="90%" stop-color="#aa0011" />
+      <stop offset="100%" stop-color="#550005" />
+    </radialGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+    <linearGradient id="overallsGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff8c00" />
+      <stop offset="60%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+    <linearGradient id="greenSleeve" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" />
+      <stop offset="100%" stop-color="#4d7c0f" />
+    </linearGradient>
+    <radialGradient id="faceGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#fff3ea" />
+      <stop offset="75%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fdba74" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="250" cy="250" r="245" fill="url(#bgGlow)" stroke="#ffffff" stroke-width="6" />
+
+  <polygon points="75,170 80,185 95,190 80,195 75,210 70,195 55,190 70,185" fill="#fef08a" opacity="0.9" />
+  <polygon points="425,140 429,152 441,156 429,160 425,172 421,160 409,156 421,152" fill="#67e8f9" opacity="0.9" />
+  <polygon points="435,320 439,330 449,334 439,338 435,348 431,338 421,334 431,330" fill="#fef08a" opacity="0.9" />
+  <polygon points="65,300 68,308 76,311 68,314 65,322 62,314 54,311 62,308" fill="#f472b6" opacity="0.9" />
+
+  <circle cx="250" cy="235" r="150" fill="url(#sunGlow)" stroke="#ffffff" stroke-width="8" />
+
+  <g id="mascotClown">
+    <path d="M165 210 L115 240 L125 285 L180 250 Z" fill="url(#greenSleeve)" stroke="#ffffff" stroke-width="5" />
+    <g>
+      <ellipse cx="105" cy="255" rx="30" ry="24" transform="rotate(-20 105 255)" fill="#fed7aa" stroke="#ffffff" stroke-width="4" />
+      <ellipse cx="78" cy="235" rx="9" ry="17" transform="rotate(-40 78 235)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="70" cy="255" rx="9" ry="18" transform="rotate(-15 70 255)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="72" cy="275" rx="9" ry="18" transform="rotate(15 72 275)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="85" cy="290" rx="9" ry="16" transform="rotate(40 85 290)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+    </g>
+
+    <path d="M335 210 L385 240 L375 285 L320 250 Z" fill="url(#greenSleeve)" stroke="#ffffff" stroke-width="5" />
+    <g>
+      <ellipse cx="395" cy="255" rx="30" ry="24" transform="rotate(20 395 255)" fill="#fed7aa" stroke="#ffffff" stroke-width="4" />
+      <ellipse cx="422" cy="235" rx="9" ry="17" transform="rotate(40 422 235)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="430" cy="255" rx="9" ry="18" transform="rotate(15 430 255)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="428" cy="275" rx="9" ry="18" transform="rotate(-15 428 275)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+      <ellipse cx="415" cy="290" rx="9" ry="16" transform="rotate(-40 415 290)" fill="#fed7aa" stroke="#ffffff" stroke-width="3" />
+    </g>
+
+    <path d="M185 220 L220 235 L250 215 L280 235 L315 220 L330 300 L290 380 L210 380 L170 300 Z" fill="url(#overallsGrad)" stroke="#ffffff" stroke-width="5" />
+    <path d="M200 240 L250 255 L300 240 L310 295 L250 330 L190 295 Z" fill="#ff7a00" stroke="#c2410c" stroke-width="2" />
+
+    <g>
+      <polygon points="240,225 260,225 270,270 250,300 230,270" fill="#7e22ce" stroke="#ffffff" stroke-width="3" />
+      <circle cx="250" cy="245" r="4" fill="#facc15" />
+      <circle cx="245" cy="265" r="5" fill="#facc15" />
+      <circle cx="255" cy="280" r="4" fill="#facc15" />
+    </g>
+
+    <path d="M165 130 C130 110 110 130 120 160 C95 165 100 200 130 195 C115 220 145 235 170 215 Z" fill="url(#hairGrad)" stroke="#ffffff" stroke-width="5" />
+    <path d="M335 130 C370 110 390 130 380 160 C405 165 400 200 370 195 C385 220 355 235 330 215 Z" fill="url(#hairGrad)" stroke="#ffffff" stroke-width="5" />
+
+    <ellipse cx="250" cy="165" rx="76" ry="72" fill="url(#faceGrad)" stroke="#ffffff" stroke-width="6" />
+
+    <ellipse cx="195" cy="180" rx="14" ry="10" fill="#f43f5e" opacity="0.35" />
+    <ellipse cx="305" cy="180" rx="14" ry="10" fill="#f43f5e" opacity="0.35" />
+
+    <path d="M200 100 Q220 85 235 98" stroke="#581c87" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M300 100 Q280 85 265 98" stroke="#581c87" stroke-width="4" stroke-linecap="round" fill="none" />
+
+    <g>
+      <ellipse cx="215" cy="130" rx="22" ry="34" fill="#ffffff" stroke="#1e1b4b" stroke-width="4" />
+      <ellipse cx="218" cy="125" rx="14" ry="22" fill="#0f172a" />
+      <ellipse cx="212" cy="115" rx="6" ry="9" fill="#ffffff" />
+      <circle cx="224" cy="135" r="3.5" fill="#ffffff" />
+    </g>
+
+    <g>
+      <ellipse cx="285" cy="130" rx="22" ry="34" fill="#ffffff" stroke="#1e1b4b" stroke-width="4" />
+      <ellipse cx="282" cy="125" rx="14" ry="22" fill="#0f172a" />
+      <ellipse cx="276" cy="115" rx="6" ry="9" fill="#ffffff" />
+      <circle cx="288" cy="135" r="3.5" fill="#ffffff" />
+    </g>
+
+    <path d="M185 170 Q250 235 315 170 Q250 185 185 170 Z" fill="#881337" stroke="#1e1b4b" stroke-width="4" />
+    <path d="M200 174 Q250 190 300 174" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" />
+    <ellipse cx="250" cy="198" rx="26" ry="12" fill="#f43f5e" />
+
+    <ellipse cx="250" cy="165" rx="28" ry="22" fill="url(#noseGrad)" stroke="#ffffff" stroke-width="3" />
+    <ellipse cx="242" cy="158" rx="7" ry="5" fill="#ffffff" opacity="0.8" />
+  </g>
+
+  <g id="brandTypography">
+    <text x="250" y="420" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="48" font-weight="900" fill="#090117" stroke="#090117" stroke-width="14" stroke-linejoin="round">Megarecreacion</text>
+    <text x="250" y="416" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="48" font-weight="900" fill="#ffffff" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">Megarecreacion</text>
+    <text x="250" y="416" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="48" font-weight="900" fill="url(#rainbowGrad)">Megarecreacion</text>
+
+    <text x="250" y="462" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#090117" stroke="#090117" stroke-width="8" stroke-linejoin="round">3197188976 - 3163048505</text>
+    <text x="250" y="460" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#ffffff" stroke="#ffffff" stroke-width="5" stroke-linejoin="round">3197188976 - 3163048505</text>
+    <text x="250" y="460" text-anchor="middle" font-family="'Righteous', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="url(#rainbowGrad)">3197188976 - 3163048505</text>
+  </g>
+</svg>

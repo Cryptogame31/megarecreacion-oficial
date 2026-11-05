@@ -1,0 +1,6 @@
+{
+  "name": "Mega Recreación Medellín",
+  "description": "Landing page de alta energía y reservas para Mega Recreación Medellín: personajes infantiles, pausas activas empresariales y entregas mágicas en el Valle de Aburrá.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
