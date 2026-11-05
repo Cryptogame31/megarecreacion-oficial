@@ -14,6 +14,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { PaymentSuccessPage } from './components/PaymentSuccessPage';
 import { BookingPage } from './components/BookingPage';
+import { BookingModal } from './components/BookingModal';
 
 export default function App() {
   const getInitialRoute = () => {
@@ -33,6 +34,10 @@ export default function App() {
 
   const [currentRoute, setCurrentRoute] = useState<'home' | 'pagook' | 'reservar'>(getInitialRoute);
   const [bookingServiceType, setBookingServiceType] = useState<'personaje-show' | 'desayuno-sorpresa' | 'pausa-activa'>('personaje-show');
+  
+  // Estado para el Modal Rápido de Cotización / Reserva conectado a n8n
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalDefaultPkg, setModalDefaultPkg] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const handleLocationChange = () => {
@@ -69,20 +74,15 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Abre el modal rápido de n8n o la página completa según se requiera
+  const handleOpenQuickBooking = (packageName?: string) => {
+    setModalDefaultPkg(packageName);
+    setIsModalOpen(true);
+  };
+
   const handleNavigateToBooking = (service?: 'personaje-show' | 'desayuno-sorpresa' | 'pausa-activa') => {
-    if (service) {
-      setBookingServiceType(service);
-      const query = service === 'desayuno-sorpresa' 
-        ? '?servicio=desayunos-sorpresa' 
-        : service === 'pausa-activa'
-        ? '?servicio=pausas-activas'
-        : '';
-      window.history.pushState(null, '', `/reservar${query}`);
-    } else {
-      window.history.pushState(null, '', '/reservar');
-    }
-    setCurrentRoute('reservar');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Al pulsar cotizar/reservar en la landing, abrimos el modal interactivo conectado a n8n
+    handleOpenQuickBooking();
   };
 
   if (currentRoute === 'pagook') {
@@ -96,21 +96,21 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#030611] text-slate-100 font-sans selection:bg-pink-500 selection:text-white relative">
       {/* Top Fixed Header Navigation */}
-      <Navbar onOpenBooking={handleNavigateToBooking} />
+      <Navbar onOpenBooking={() => handleOpenQuickBooking()} />
 
       {/* Main Sections Flow */}
       <main>
         {/* 1. First Hero Video Experience */}
-        <VideoHero onOpenBooking={handleNavigateToBooking} />
+        <VideoHero onOpenBooking={() => handleOpenQuickBooking()} />
 
         {/* 2. Interactive 3D Characters Showcase & Booking */}
-        <Hero onOpenBooking={handleNavigateToBooking} />
+        <Hero onOpenBooking={() => handleOpenQuickBooking('Show Personaje Disney / Favorito (1 Hora)')} />
 
         {/* 3. Key Trust Metrics & Animated Counters */}
         <Metrics />
 
         {/* 4. Bento Grid of Services & Transparent Prices */}
-        <BentoServices onOpenBooking={handleNavigateToBooking} />
+        <BentoServices onOpenBooking={() => handleOpenQuickBooking()} />
 
         {/* 5. Live Show Action Hero Video Showcase */}
         <MidHeroVideo />
@@ -132,10 +132,17 @@ export default function App() {
       </main>
 
       {/* Footer with Contact & Legal */}
-      <Footer onOpenBooking={handleNavigateToBooking} />
+      <Footer onOpenBooking={() => handleOpenQuickBooking()} />
 
       {/* Floating WhatsApp Action Button */}
-      <FloatingWhatsApp onOpenBooking={handleNavigateToBooking} />
+      <FloatingWhatsApp onOpenBooking={() => handleOpenQuickBooking()} />
+
+      {/* Modal Formulario de Captura Directo a n8n, Sheets y Telegram */}
+      <BookingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        defaultPackage={modalDefaultPkg}
+      />
     </div>
   );
 }
